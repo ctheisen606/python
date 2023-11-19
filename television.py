@@ -4,7 +4,7 @@ class Television:
     MIN_CHANNEL = 0
     MAX_CHANNEL = 3
 
-    def __init__(self):
+    def __init__(self) -> None:
         """
         This function creates the television object and sets the volume and channel at the minimum values
         """
@@ -13,13 +13,13 @@ class Television:
         self.__volume = Television.MIN_VOLUME
         self.__channel = Television.MIN_CHANNEL
 
-    def power(self):
+    def power(self) -> None:
         """
         This function turns the television on or off
         """
         self.__status = not self.__status
 
-    def mute(self):
+    def mute(self) -> None:
         """
         This function mutes or unmutes the television when the television is on
         """
@@ -27,7 +27,7 @@ class Television:
             self.__muted = not self.__muted
 
 
-    def channel_up(self):
+    def channel_up(self) -> None:
         """
         This function moves the channel up when the television is on
         """
@@ -37,7 +37,7 @@ class Television:
             else:
                 self.__channel = Television.MIN_CHANNEL
 
-    def channel_down(self):
+    def channel_down(self) -> None:
         """
         This function moves the channel down when the television is on
         """
@@ -47,7 +47,7 @@ class Television:
             else:
                 self.__channel = Television.MAX_CHANNEL
 
-    def volume_up(self):
+    def volume_up(self) -> None :
         """
         This function moves the volume up when the television is on
         """
@@ -56,7 +56,7 @@ class Television:
             if self.__volume < Television.MAX_VOLUME:
                 self.__volume += 1
 
-    def volume_down(self):
+    def volume_down(self) -> None:
         """
         This function moves the volume up when the television is on
         """
